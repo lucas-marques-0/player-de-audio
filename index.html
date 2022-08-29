@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <title>Player de áudio</title>
+</head>
+<body>
+    <div id="container">
+
+        <audio id="musicas">
+            <source src="./musicas/musica1.mp3" type="audio/mp3">
+        </audio>
+
+        <img class="ilustracao" src="./ilustrações/ilustra1.jpg"><br><br>
+
+
+        <h1 id="nomeMusica">WUSYANAME - Tyler, the creator</h1><br>
+
+
+        <div class="duracao">
+            <div class="barra">
+                <progress value="0" max="1"></progress>
+                <div class="ponto"></div>
+            </div>
+
+            <div class="tempo">
+                <p class="inicio">0:00</p>
+                <p class="fim">2:15</p>
+            </div>
+        </div> <br>
+
+
+        <div id="controle">
+            <img class="botoes" onclick="anterior()" src="./icones/voltar.png">
+            <img id="bto" class="botoes" onclick="play()" src="./icones/play.png">
+            <img class="botoes" onclick="parar()" src="./icones/stop.png">
+            <img class="botoes" onclick="proxima()" src="./icones/adiantar.png">   
+        </div>
+
+        <div id="volume">
+            <h3>volume:</h3>
+            <input id="vol" type="range" min="0" max="100" value="100" onclick="volume()">
+        </div>
+
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

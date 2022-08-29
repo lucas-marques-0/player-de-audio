@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+}
+
+body{
+    background-color: #112211;
+
+    /* entender isso */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    position: absolute;
+    width: 500px;
+    background-color: #1DD05D;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 5px solid black;
+
+    /* para centralizar verticalmente, antes era position relative */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.botoes{
+    background-color: black;
+    border-radius: 100%;
+    width: 55px;
+}
+
+.ilustracao{
+    width: 350px;
+    border: 10px solid black;
+    border-radius: 10px;
+    
+}
+
+.duracao{
+    width: 350px;
+    margin-left: 70px;
+}
+
+/* estamos estilizando a barra vazia (a div barra), essa barra vazia vai ser preenchida pela cheia (tag progress dentro dela) */
+.barra{
+    width: 350px;
+    height: 7px;
+    border: 3px solid black;
+    border-radius: 5px;
+
+    /* função não aprendida até o momento (nesse caso usada parea colocar a barra real dentro da vazia)*/
+    display: flex;
+    /* para alinha a bolinha criada abaixo com a barra progress (propriedade só pode ser usado por causa do display flex) */
+    align-items: center;
+}
+
+progress{
+    /* além do display flex precisamos garantir que os dois elementos (barras) tenham a mesma autura, para não ficarem sobrepostas */
+    height: 7px;
+
+    /* agora podemos perseber uma relação entre as duas, ao colocar uma porcentagem o elento assume x% da barra vazia (dando o design) -> estrava width: 20% */
+    width: 0%;
+}
+
+/* criando a bolinha (transformando um quadrado em um círculo) que ficara colcado e ao lado da barra progress dentro da div */
+.ponto{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: -2px; /* tirando o mini espaçamento entra a barra e o ponto (o menor indica esquerda) */
+}
+
+.tempo{
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+}
+
+
+#vol{
+    width: 50%;
+}
